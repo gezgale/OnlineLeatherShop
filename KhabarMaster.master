@@ -1,0 +1,279 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="KhabarMaster.master.cs" Inherits="KhabarMaster" %>
+<%@ Register Src="counterPage.ascx" TagName="counterPage" TagPrefix="uc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>فروشگاه چرم چیستا</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+</head>
+<body dir="rtl">
+    <form id="form1" runat="server">
+    <div>
+        <table align="center" style="width: 87px" cellpadding="0" cellspacing="0">
+            <tr>
+                <td colspan="3">
+                    <table align="center" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                            <td style="background-image: url(images/headerbg.gif); width: 398px">
+                                <asp:Image ID="Image1" runat="server" ImageUrl="~/images/headerright.jpg" /></td>
+                            <td style="background-image: url(images/headerbg.gif); width: 455px">
+                            </td>
+                            <td style="background-image: url(images/headerbg.gif); text-align: left">
+                                <asp:Image ID="Image2" runat="server" ImageUrl="~/images/logo.jpg" /></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                            <td style="width: 19px; height: 19px;">
+                                <img height="19" src="images/top-right.gif" width="19" /></td>
+                            <td background="images/top-bg-right.gif" style="width: 158px; height: 19px;">
+                                <img height="19" src="images/top-bg-right.gif" width="5" /></td>
+                            <td width="5" style="height: 19px">
+                                <img height="19" src="images/top-middle.gif" width="5" /></td>
+                            <td background="images/top-bg-left.gif" style="height: 19px">
+                                <img height="19" src="images/top-bg-left.gif" width="5" /></td>
+                            <td width="19" style="height: 19px">
+                                <img height="19" src="images/top-left.gif" width="19" /></td>
+                        </tr>
+                        <tr>
+                            <td background="images/right-bg.gif" style="width: 19px; height: 287px;">
+                                <img height="5" src="images/right-bg.gif" width="19" /></td>
+                            <td bgcolor="#f1f1f1" style="padding-left: 8px; width: 158px; height: 287px;" valign="top">
+                                <table border="0" cellpadding="0" cellspacing="0" width="160" align="center" style="border-right: #666666 1px solid; border-top: #666666 1px solid; border-left: #666666 1px solid; border-bottom: #666666 1px solid">
+                                    <tr>
+                                        <td align="center" bgcolor="#d3dadf">
+                                            لینکهای اصلی</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-right: 4px; padding-left: 4px; text-align: center;" dir="rtl">
+                                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="0"
+                                                ForeColor="#333333" GridLines="None" ShowHeader="False" Width="100%" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                                                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                                <Columns>
+                                                    <asp:TemplateField HeaderText="لینکهای اصلی">
+                                                        <ItemTemplate>
+                                                            &nbsp;<asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# Eval("MainLinkLink") %>'
+                                                                Text='<%# Eval("MainLinkDescription") %>'></asp:HyperLink>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                </Columns>
+                                                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                                                <EditRowStyle BackColor="#999999" />
+                                                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                                                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                                <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                                            </asp:GridView>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br />
+                                <table border="0" cellpadding="0" cellspacing="0" width="160" align="center" style="border-right: #666666 1px solid; border-top: #666666 1px solid; border-left: #666666 1px solid; border-bottom: #666666 1px solid">
+                                    <tr>
+                                        <td align="center" bgcolor="#d3dadf">
+                                            گروه های محصولات</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-right: 4px; padding-left: 4px; vertical-align: top; height: 108px; text-align: center;">
+                                            <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" CellPadding="0"
+                                                ForeColor="#333333" GridLines="None" ShowHeader="False" Width="100%">
+                                                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                                <Columns>
+                                                    <asp:TemplateField HeaderText="لینکهای اصلی">
+                                                        <ItemTemplate>
+                                                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# "ShowNewsGroups.aspx?NewsGroupID=" + Eval("NewsGroupID") %>'
+                                                                Text='<%# Eval("NewgGroupDescription") %>'></asp:HyperLink>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                </Columns>
+                                                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                                                <EditRowStyle BackColor="#999999" />
+                                                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                                                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                                <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                                            </asp:GridView>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br />
+                                <table border="0" cellpadding="0" cellspacing="0" width="160" align="center" style="border-right: #666666 1px solid; border-top: #666666 1px solid; border-left: #666666 1px solid; border-bottom: #666666 1px solid" height="20">
+                                    <tr>
+                                        <td align="center" bgcolor="#d3dadf" style="height: 18px">
+                                            آرشیو های ایجاد شده</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-right: 4px; padding-left: 4px; vertical-align: top; height: 64px; text-align: center;"><asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" CellPadding="0"
+                                                ForeColor="#333333" GridLines="None" ShowHeader="False" Width="100%">
+                                            <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                            <Columns>
+                                                <asp:TemplateField HeaderText="آرشیوهای ایجدا شده">
+                                                    <ItemTemplate>
+                                                        <table cellpadding="0" cellspacing="0" dir="rtl" lang="fa">
+                                                            <tr>
+                                                                <td colspan="3" dir="ltr" rowspan="3">
+                                                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# "ShowArchieves.aspx?ArchiveID=" + Eval("ArchivedDate") %>'
+                                                            Text='<%# Eval("ArchivedDate") %>'></asp:HyperLink></td>
+                                                            </tr>
+                                                            <tr>
+                                                            </tr>
+                                                            <tr>
+                                                            </tr>
+                                                        </table>
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                            </Columns>
+                                            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                                            <EditRowStyle BackColor="#999999" />
+                                            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                                            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                            <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                            <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                                        </asp:GridView>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br />
+                                <table border="0" cellpadding="0" cellspacing="0" width="160" align="center" style="border-right: #666666 1px solid; border-top: #666666 1px solid; border-left: #666666 1px solid; border-bottom: #666666 1px solid" height="20">
+                                    <tr>
+                                        <td align="center" bgcolor="#d3dadf" style="height: 18px">
+                                            اطلاعات سیستمی</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-right: 4px; padding-left: 4px; vertical-align: top; height: 64px; text-align: center;">
+                                            <table cellspacing="0" class="0" width="95%">
+                                                <tr>
+                                                    <td style="text-align: right">
+                                                        <span style="font-size: 7pt">کل بازدیدها:</span></td>
+                                                    <td>
+                                                        <asp:Label ID="Label2" runat="server" Font-Size="7pt" Text="Label"></asp:Label></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: right">
+                                                        <span style="font-size: 7pt">کل کاربران:</span></td>
+                                                    <td>
+                                                        <asp:Label ID="Label3" runat="server" Font-Size="7pt" Text="Label"></asp:Label></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: right">
+                                                        <span style="font-size: 7pt">کل محصولات:</span></td>
+                                                    <td>
+                                                        <asp:Label ID="Label4" runat="server" Font-Size="7pt" Text="Label"></asp:Label></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: right">
+                                                        <span style="font-size: 7pt">کل گروه ها:</span></td>
+                                                    <td>
+                                                        <asp:Label ID="Label5" runat="server" Font-Size="7pt" Text="Label"></asp:Label></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br />
+                                <table border="0" cellpadding="0" cellspacing="0" width="160" align="center" style="border-right: #666666 1px solid; border-top: #666666 1px solid; border-left: #666666 1px solid; border-bottom: #666666 1px solid" height="20">
+                                    <tr>
+                                        <td align="center" bgcolor="#d3dadf" style="height: 18px">
+                                            بخش کاربری</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-right: 4px; padding-left: 4px; vertical-align: top; height: 64px; text-align: center;">
+                                            <asp:Panel ID="Panel1" runat="server" Height="50px" Width="125px">
+                                            <table cellpadding="0" cellspacing="0" style="width: 118%">
+                                                <tr>
+                                                    <td style="text-align: right">
+                                                        <span style="font-size: 7pt">نام کاربری:&nbsp;</span></td>
+                                                    <td style="text-align: right">
+                                                        <asp:TextBox ID="TextBox1" runat="server" Font-Size="7pt" Width="80px"></asp:TextBox></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: right">
+                                                        <span style="font-size: 7pt">کلمه عبور:</span></td>
+                                                    <td style="text-align: right">
+                                                        <asp:TextBox ID="TextBox2" runat="server" Font-Size="7pt" Width="80px" TextMode="Password"></asp:TextBox></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="height: 22px">
+                                                    </td>
+                                                    <td style="text-align: right; height: 22px;">
+                                                        <asp:Button ID="Button1" runat="server" Font-Bold="False" Font-Names="Tahoma" Font-Size="XX-Small"
+                                                            Height="22px" Text="ورود" Width="51px" CausesValidation="False" OnClick="Button1_Click" /></td>
+                                                </tr>
+                                            </table>
+                                            </asp:Panel>
+                                            &nbsp;<asp:Label ID="Label1" runat="server" Font-Size="7pt" ForeColor="#FF0000" Text="Label"
+                                                Visible="False"></asp:Label></td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td background="images/divider-bg.gif" style="height: 287px">
+                                <img height="5" src="images/divider-bg.gif" width="5" /></td>
+                            <td bgcolor="#e3eaef" style="padding-right: 8px; height: 287px;" valign="top">
+                                <center>
+                                    <div dir="ltr">
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+        </asp:contentplaceholder>
+                                        &nbsp; &nbsp;&nbsp;&nbsp;<uc1:counterPage ID="CounterPage1" runat="server" />
+                                    </div>
+                                </center>
+                            </td>
+                            <td background="images/left-bg.gif" width="19" style="height: 287px">
+                                <img height="5" src="images/left-bg.gif" width="19" /></td>
+                        </tr>
+                        <tr>
+                            <td style="width: 19px">
+                                <img height="19" src="images/bottom-right.gif" width="19" /></td>
+                            <td background="images/bottom-bg-right.gif" style="width: 158px">
+                                <img height="19" src="images/bottom-bg-right.gif" width="5" /></td>
+                            <td width="5">
+                                <img height="19" src="images/bottom-middle.gif" width="5" /></td>
+                            <td background="images/bottom-bg-left.gif">
+                                <img height="19" src="images/bottom-bg-left.gif" width="5" /></td>
+                            <td width="19">
+                                <img height="19" src="images/bottom-left.gif" width="19" /></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <table id="tt" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                            <td style="height: 19px" width="19">
+                                <img height="19" src="images/top-right.gif" width="19" /></td>
+                            <td background="images/top-bg-right.gif" style="height: 19px">
+                                <img height="19" src="images/top-bg-right.gif" width="5" /></td>
+                            <td style="width: 19px; height: 19px">
+                                <img height="19" src="images/top-left-footer.gif" width="19" /></td>
+                        </tr>
+                        <tr>
+                            <td background="images/right-bg.gif" width="19">
+                                <img height="5" src="images/right-bg.gif" width="19" /></td>
+                            <td align="middle" bgcolor="#f1f1f1" style="padding-left: 8px">
+                            </td>
+                            <td background="images/left-bg-footer.gif" style="width: 19px">
+                                <img height="5" src="images/left-bg-footer.gif" width="19" /></td>
+                        </tr>
+                        <tr>
+                            <td width="19">
+                                <img height="19" src="images/bottom-right.gif" width="19" /></td>
+                            <td background="images/bottom-bg-right.gif">
+                                <img height="19" src="images/bottom-bg-right.gif" width="5" /></td>
+                            <td style="width: 19px">
+                                <img height="19" src="images/bottom-left-footer.gif" width="19" /></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        &nbsp;<br />
+        &nbsp;</div>
+    </form>
+</body>
+</html>

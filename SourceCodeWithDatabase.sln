@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SourceCodeWithDatabase", ".", "{F17A4054-846F-4254-B4CE-CA4995E524D3}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/SourceCodeWithDatabase"
+		Debug.AspNetCompiler.PhysicalPath = "G:\Projects\CharmChista\SourceCodeWithDatabase\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\SourceCodeWithDatabase\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/SourceCodeWithDatabase"
+		Release.AspNetCompiler.PhysicalPath = "G:\Projects\CharmChista\SourceCodeWithDatabase\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\SourceCodeWithDatabase\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1879"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F17A4054-846F-4254-B4CE-CA4995E524D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F17A4054-846F-4254-B4CE-CA4995E524D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
